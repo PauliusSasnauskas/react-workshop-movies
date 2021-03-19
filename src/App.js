@@ -22,6 +22,7 @@ export default class App extends React.Component {
       <div>
 
         {/* 4. Present the MovieItems */}
+        <MovieItem movie={movies[2]} />
         
       </div>
     );
