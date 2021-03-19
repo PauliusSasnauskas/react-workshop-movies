@@ -29,6 +29,9 @@ export default class MovieItem extends React.Component {
         if (isRecommended){
             bgColor = "#FFE050";
         }
+        if (this.state.isWatched){
+            bgColor = "#AAAAAA";
+        }
         
         // 2. Add a checkbox with an onChange function
 
