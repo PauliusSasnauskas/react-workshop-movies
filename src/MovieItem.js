@@ -3,6 +3,13 @@ import React from 'react';
 export default class MovieItem extends React.Component {
 
     // 1. Define an initial state
+    constructor(props){
+        super(props);
+        
+        this.state = {
+            isWatched: false
+        }
+    }
 
     // 3. Define a function which changes the state
 
