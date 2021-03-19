@@ -9,11 +9,15 @@ export default class MovieItem extends React.Component {
         this.state = {
             isWatched: false
         }
+
+        this.changeWatched = this.changeWatched.bind(this);
     }
 
     // 3. Define a function which changes the state
     changeWatched(){
-        console.log("Changed!");
+        this.setState((oldState) => {
+            return { isWatched: !oldState.isWatched };
+        })
     }
 
     render(){
