@@ -12,6 +12,9 @@ export default class MovieItem extends React.Component {
     }
 
     // 3. Define a function which changes the state
+    changeWatched(){
+        console.log("Changed!");
+    }
 
     render(){
         const movie = this.props.movie;
@@ -26,6 +29,7 @@ export default class MovieItem extends React.Component {
         // 2. Add a checkbox with an onChange function
 
         return <div style={{backgroundColor: bgColor}}>
+            <input type="checkbox" checked={this.state.isWatched} onChange={this.changeWatched} />
             <img src={movie.img} />
             {movie.title} ({movie.year})
         </div>;
