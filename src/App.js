@@ -19,7 +19,9 @@ export default class App extends React.Component {
     // 3. Make a MovieItem for each movie in the movies array (don't forget to pass props ☻)
     const movieItems = [];
     for (let i = 0; i < movies.length; i++){
-      movieItems.push(<MovieItem movie={movies[i]} />);
+      const isMovieRecommended = recommendedMovies.includes(movies[i].id);
+
+      movieItems.push(<MovieItem movie={movies[i]} recommended={isMovieRecommended} />);
     }
 
     return (
