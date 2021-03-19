@@ -17,12 +17,16 @@ export default class App extends React.Component {
     const recommendedMovies = [1, 4, 6];
     
     // 3. Make a MovieItem for each movie in the movies array (don't forget to pass props ☻)
+    const movieItems = [];
+    for (let i = 0; i < movies.length; i++){
+      movieItems.push(<MovieItem movie={movies[i]} />);
+    }
 
     return (
       <div>
 
         {/* 4. Present the MovieItems */}
-        <MovieItem movie={movies[2]} />
+        {movieItems}
         
       </div>
     );
