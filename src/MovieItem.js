@@ -4,10 +4,13 @@ export default class MovieItem extends React.Component {
 
     render(){
         // 1. Use props (properties) to obtain movie parameters
-        // const p1 = this.props.parameter1
+        const movie = this.props.movie;
         
         // 2. Return a graphical representation of the MovieItem (some HTML)
-        return <b>Hello world!</b>;
+        return <div>
+            <img src={movie.img} />
+            {movie.title} ({movie.year})
+        </div>;
     }
 
 }
